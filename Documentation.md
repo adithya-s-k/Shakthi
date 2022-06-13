@@ -15,4 +15,9 @@ Connected a relay and power supply to and was able to turn on and off an led usi
 
 Aim - To setup a simple websocket connections with ESP3266.
 \
+## 13/6/2022
+
+Aim - To calibrate and get accurate readings from (Voltage sensor)[https://robu.in/product/ac-voltage-sensor-module-zmpt101b-single-phase/]
 \
+\
+
