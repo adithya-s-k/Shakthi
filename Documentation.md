@@ -16,7 +16,7 @@ Connected a relay and power supply to and was able to turn on and off an led usi
 Aim - To setup a simple websocket connections with ESP3266.
 ## 13/6/2022
 
-Aim - To calibrate and get accurate readings from (Voltage sensor)[https://robu.in/product/ac-voltage-sensor-module-zmpt101b-single-phase/]
+Aim - To calibrate and get accurate readings from [Voltage sensor](https://robu.in/product/ac-voltage-sensor-module-zmpt101b-single-phase/)
 \
 Voltage sensor calibrated and displayed on the serial monitor
 \
@@ -32,6 +32,7 @@ Aim - To enclose all the sensors and the circuit within a box and integrate the 
 - It can also measure the voltage(Vrms).
 - The current value is fixed to 2.0 Amps(next step is to integrate the current sensor)
 - Both power an energy calculation is done successfully and displayed on the Blynk app as well as the terminal.
+\
 [Code used](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Smart_Plug/node_mcu_relay/node_mcu_relay.ino#L1)
 ## 30/6/2022
 

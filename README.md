@@ -9,3 +9,5 @@ It also can switch on and off your connected electrical appliances remotly using
 - AC Voltage Sensor Module ZMPT101B
 - SCT013‑030 30A Current Sensor Clamp Current Transformation for Current Measurement
 - Relay
+
+# [Documentation](https://github.com/adithya-s-k/Shakthi/blob/master/Documentation.md)
