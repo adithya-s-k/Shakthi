@@ -46,27 +46,96 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
+BlynkTimer timer;
+
+#include "EmonLib.h"             // Include Emon Library
+
+#define VOLT_CAL 541
+
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 char auth[] = "COXTkWaiiRJxB1ERgNetMIOKZK3SxVOB";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "hello";
-char pass[] = "helloworld";
+char ssid[] = "OMKOLAVI";
+char pass[] = "vijayaraja123";
+
+EnergyMonitor emon;             // Create an instance
+const int analogInPin = A0;
+
+float kWh = 0;
+unsigned long lastmillis = millis();
+ 
+void myTimerEvent()
+{
+  emon.calcVI(20, 2000);
+  kWh = kWh + emon.apparentPower * (millis() - lastmillis) / 3600000000.0;
+  yield();
+  Serial.print("Vrms: ");
+  Serial.print(emon.Vrms, 2);
+  Serial.print("V");
+ 
+  Serial.print("\tIrms: ");
+  Serial.print(2.0, 4);
+  Serial.print("A");
+ 
+  Serial.print("\tPower: ");
+  Serial.print((emon.Vrms*2.0)/1000, 4);
+  Serial.print("W");
+ 
+  Serial.print("\tkWh: ");
+  Serial.print(kWh, 5);
+  Serial.println("kWh");
+  
+//  lcd.clear();
+//  lcd.setCursor(0, 0);
+//  lcd.print("Vrms:");
+//  lcd.print(emon.Vrms, 2);
+//  lcd.print("V");
+//  lcd.setCursor(0, 1);
+//  lcd.print("Irms:");
+//  lcd.print(emon.Irms, 4);
+//  lcd.print("A");
+//  delay(2500);
+//  
+//  lcd.clear();
+//  lcd.setCursor(0, 0);
+//  lcd.print("Power:");
+//  lcd.print(emon.apparentPower, 4);
+//  lcd.print("W");
+//  lcd.setCursor(0, 1);
+//  lcd.print("kWh:");
+//  lcd.print(kWh, 4);
+//  lcd.print("W");
+//  delay(2500);
+ 
+  lastmillis = millis();
+ 
+  Blynk.virtualWrite(V0, emon.Vrms);
+  Blynk.virtualWrite(V1, 2.0);
+  Blynk.virtualWrite(V2, (emon.Vrms*2.0)/1000);
+  Blynk.virtualWrite(V3, kWh);
+}
 
 void setup()
 {
   // Debug console
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   Blynk.begin(auth, ssid, pass);
+
   // You can also specify server:
   //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80);
   //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
+
+  emon.voltage(analogInPin, VOLT_CAL, 1.7); // Voltage: input pin, calibration, phase_shift
+  
+  timer.setInterval(5000L, myTimerEvent);
 }
 
 void loop()
 {
   Blynk.run();
+  timer.run();
 }
