@@ -40,3 +40,14 @@ Aim - To integrate the current sensor so that we can accurately determine the po
 \
 \
 [Current sensor which we are using is SCT013](https://robu.in/product/sct-013-060-non-invasive-ac-current-sensor-clamp-sensor-60a/) 
+
+## 2/7/2022
+
+Aim - To integrate wifi manager which prevents from hardcoding wifi credentials.
+\
+\
+[Refrence Video](https://youtu.be/dQw4w9WgXcQ)
+\
+[Library Used](https://github.com/tzapu/WiFiManager)
+\
+[Code Used](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Wifi_manager/Wifi_manager_basic/Wifi_manager_basic.ino#L1)
