@@ -13,6 +13,10 @@ Connected a relay and power supply to and was able to turn on and off an led usi
 
 ## 24/5/2022
 
+This is the circuit connections which i have followed for this project.
+\
+![circuit Connections](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/circuit_diagram.jpg)
+
 Aim - To setup a simple websocket connections with ESP3266.
 ## 13/6/2022
 
