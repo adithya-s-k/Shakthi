@@ -55,3 +55,10 @@ Aim - To integrate wifi manager which prevents from hardcoding wifi credentials.
 [Library Used](https://github.com/tzapu/WiFiManager)
 \
 [Code Used](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Wifi_manager/Wifi_manager_basic/Wifi_manager_basic.ino#L1)
+
+## 16/7/2022
+
+Aim - Shifted from ESP8266 to ESP32
+\
+\
+[Code Used](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Smart_Plug/ESP32_voltage_current_sensor)
