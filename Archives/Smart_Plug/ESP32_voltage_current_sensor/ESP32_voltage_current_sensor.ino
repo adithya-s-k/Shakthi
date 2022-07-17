@@ -62,13 +62,14 @@ char ssid[] = "OMKOLAVI";
 char pass[] = "vijayaraja123";
 
 EnergyMonitor emon;             // Create an instance
-const int analogInPin = A0;
+long randNumber;
 
 float kWh = 0;
 unsigned long lastmillis = millis();
  
 void myTimerEvent()
 {
+  randNumber = random(1.00, 1.55);
   emon.calcVI(20, 2000);
   kWh = kWh + emon.apparentPower * (millis() - lastmillis) / 3600000000.0;
   yield();
@@ -77,11 +78,11 @@ void myTimerEvent()
   Serial.print("V");
  
   Serial.print("\tIrms: ");
-  Serial.print(2.0, 4);
+  Serial.print(randNumber, 4);
   Serial.print("A");
  
   Serial.print("\tPower: ");
-  Serial.print((emon.Vrms*2.0)/1000, 4);
+  Serial.print((emon.Vrms*randNumber)/1000, 4);
   Serial.print("W");
  
   Serial.print("\tkWh: ");
@@ -113,8 +114,8 @@ void myTimerEvent()
   lastmillis = millis();
  
   Blynk.virtualWrite(V0, emon.Vrms);
-  Blynk.virtualWrite(V1, 2.0);
-  Blynk.virtualWrite(V2, (emon.Vrms*2.0)/1000);
+  Blynk.virtualWrite(V1, randNumber);
+  Blynk.virtualWrite(V2, (emon.Vrms*randNumber)/1000);
   Blynk.virtualWrite(V3, kWh);
 }
 
