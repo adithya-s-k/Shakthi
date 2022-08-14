@@ -11,12 +11,12 @@ It also can switch on and off your connected electrical appliances remotly using
 - Relay
 
 # Check out the demonstration Video
-/
+
 [![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide1.PNG)](https://youtu.be/kS_2ZGTF39I)
-/
+
 [![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide2.PNG)](https://youtu.be/kS_2ZGTF39I)
-/
-/[![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide3.PNG)](https://youtu.be/kS_2ZGTF39I)
+
+[![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide3.PNG)](https://youtu.be/kS_2ZGTF39I)
 
 # [Documentation](https://github.com/adithya-s-k/Shakthi/blob/master/Documentation.md)
 ## 22/5/2022
