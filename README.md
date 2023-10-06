@@ -12,6 +12,10 @@ It also can switch on and off your connected electrical appliances remotly using
 
 # Check out the demonstration Video
 
+
+https://github.com/adithya-s-k/Shakthi/assets/27956426/797e8d00-092d-4b18-805b-a0bc798c1a83
+
+
 [![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide1.PNG)](https://youtu.be/kS_2ZGTF39I)
 
 [![videolink](https://github.com/adithya-s-k/Shakthi/blob/master/Archives/Assets/Slide2.PNG)](https://youtu.be/kS_2ZGTF39I)
